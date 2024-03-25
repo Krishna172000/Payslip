@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="payslip.css">
+</head>
+<style>
+    .wrapper{
+    display: flex;
+    justify-content: space-around;
+    height: 95vh;
+}
+.form{
+    width: 350px;
+    background-color: rgb(235, 213, 46);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 25px;
+    flex-direction: column;
+}
+.heading{
+    font-size: 30px;
+    margin: 0;
+}
+.label{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.inbox{
+    width: 100%;
+}
+input{
+    width: 100%;
+    height: 25px;
+    font-size: 16px;
+}
+input[type=button]{
+    margin-top: 10px;
+    width: 50%;
+    font-size: 16px;
+}
+table{
+    width: 600px;
+    margin-top: 100px;    
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: center;
+    visibility: hidden;
+}
+thead{
+    background-color: rgb(124, 124, 238);
+}
+th,td{
+    padding: 10px 0;
+}
+tbody tr:nth-child(odd){
+    background-color: rgb(238, 229, 229);
+}
+tbody tr:nth-child(even){
+    background-color: rgb(200, 196, 196);
+}
+</style>
+<body>
+    <div class="wrapper">
+        <div class="form">
+            <h3 class="heading">Pay Slip</h3>
+            <div class="nameBox inbox">
+                <div class="label">Basic Pay</div>
+                <input type="number" id="bp">
+            </div>
+            <div class="HraBox inbox">
+                <div class="label">HRA</div>
+                <input type="number" id="hra" disabled >
+            </div>
+            <div class="DaBox inbox">
+                <div class="label">DA</div>
+                <input type="number" id="da" disabled>
+            </div>
+            <div class="tvlBox inbox">
+                <div class="label">Travel</div>
+                <input type="number" id="tvl" disabled>
+            </div>
+            <div class="pfBox inbox">
+                <div class="label">PF</div>
+                <input type="number" id="pf" disabled>
+            </div>
+            <div class="grossBox inbox">
+                <div class="label">Gross</div>
+                <input type="number" id="gross" disabled>
+            </div>
+            <div class="ntslyBox inbox">
+                <div class="label">Net Salary</div>
+                <input type="number" id="netsly" disabled>
+            </div>
+            <div class="inbox" style="text-align: center;">
+                <input type="button" value="Print" id="print">
+            </div>
+        </div>
+        <div class="table" >
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>Basic Pay</th>
+                        <th>HRA</th>
+                        <th>DA</th>
+                        <th>Travel</th>
+                        <th>PF</th>
+                        <th>Gross</th>
+                        <th>Net Salary</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                   
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="payslip.js"></script>
+</body>
+</html>
